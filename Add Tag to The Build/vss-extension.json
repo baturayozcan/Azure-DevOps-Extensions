@@ -1,0 +1,46 @@
+{
+    "manifestVersion": 1,
+    "id": "build-release-task",
+    "name": "Add Tag to The Build",
+    "version": "0.0.2",
+    "publisher": "baturayozcan",
+	"public": true,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Automatically add a tag to the build regarding to source branch name. If source branch name starts with 'release', then tag the build as 'release', otherwise as 'development'.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "buildAndReleaseTask"
+        }
+    ],
+	"tags": [
+		"Tag",
+		"Build"
+	],
+	"content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildAndReleaseTask"
+            }
+        }
+    ]
+}

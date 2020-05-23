@@ -1,0 +1,19 @@
+{
+  "name": "buildandreleasetask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Baturay Ozcan",
+  "license": "ISC",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.9.5",
+    "python-shell": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "@types/q": "^1.5.4"
+  }
+}

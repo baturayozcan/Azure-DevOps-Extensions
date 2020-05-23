@@ -1,0 +1,51 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "b4fcf799-49cf-4f93-bc3f-5f9409d9cfb6",
+    "name": "addserviceconnection",
+    "friendlyName": "Add a service connection",
+    "description": "Adds a new service connection to all of the projects under a Collection or to a specific project",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Baturay Ozcan",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo $(samplestring)",
+    "inputs": [
+        {
+            "name": "collectionuri",
+            "type": "string",
+            "label": "Collection URI",
+            "defaultValue": "",
+            "required": true
+        },
+		{
+            "name": "projectname",
+            "type": "string",
+            "label": "Name of the project",
+            "defaultValue": "",
+            "required": true
+        },
+		{
+            "name": "buildid",
+            "type": "string",
+            "label": "Build ID",
+            "defaultValue": "",
+            "required": true
+        },
+		{
+            "name": "branchname",
+            "type": "string",
+            "label": "Name of the branch",
+            "defaultValue": "",
+            "required": true
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}
